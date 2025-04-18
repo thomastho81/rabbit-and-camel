@@ -9,9 +9,9 @@ import thomastho.learnin.rabbit_camel_spring.puro.Dog;
 public class Consumer {
 
 
-    @RabbitListener(queues = "queue_01")
+    @RabbitListener(queues = "dog_queue")
     public void receive(Message<Dog> in) {
-        System.out.println("Mensagem recebida ===== " + in.getPayload());
+        System.out.println("----- Mensagem Recebida: " + in.getPayload() + " -----");
     }
 
 
