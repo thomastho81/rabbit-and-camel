@@ -1,17 +1,18 @@
 package thomastho.learnin.rabbit_camel_spring.puro.consumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
+import thomastho.learnin.rabbit_camel_spring.puro.Dog;
 
 @Component
 public class Consumer {
 
-//    @RabbitListener(queues = "#{}")
-//    public void receive(String in) {
-//        System.out.println("---- Consumindo mensagem ----");
-//
-//        System.out.println("Mensagem: " + in);
-//
-//        System.out.println("---- Mensagem consumida ----");
-//    }
+
+    @RabbitListener(queues = "queue_01")
+    public void receive(Message<Dog> in) {
+        System.out.println("Mensagem recebida ===== " + in.getPayload());
+    }
+
+
 }
