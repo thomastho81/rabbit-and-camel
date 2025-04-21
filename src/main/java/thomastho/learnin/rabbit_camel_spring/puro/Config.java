@@ -3,16 +3,13 @@ package thomastho.learnin.rabbit_camel_spring.puro;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Exchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import thomastho.learnin.rabbit_camel_spring.puro.producer.Producer;
 
-@Profile("puro")
+@Profile({"puro", "puro-producer", "puro-consumer"})
 @Configuration
 public class Config {
 
@@ -22,7 +19,7 @@ public class Config {
     }
 
     @Bean
-    public Exchange directExchange() {
+    public DirectExchange directExchange() {
         return new DirectExchange("direct_01");
     }
 
@@ -39,11 +36,6 @@ public class Config {
     @Bean
     public Queue dogQueue() {
         return new Queue("dog_queue");
-    }
-
-    @Bean
-    public Producer producer(RabbitTemplate rabbitTemplate, DirectExchange directExchange) {
-        return new Producer(rabbitTemplate, directExchange);
     }
 
 }

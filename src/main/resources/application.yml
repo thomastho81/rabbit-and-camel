@@ -2,3 +2,6 @@ spring:
   application:
     name: rabbit-camel-spring
 
+camel:
+  springboot:
+    main-run-controller: true

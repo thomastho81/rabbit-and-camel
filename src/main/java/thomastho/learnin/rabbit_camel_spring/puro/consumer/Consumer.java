@@ -4,9 +4,9 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.puro.Dog;
+import thomastho.learnin.rabbit_camel_spring.Dog;
 
-@Profile("puro")
+@Profile({"puro", "puro-consumer"})
 @Component
 public class Consumer {
 
