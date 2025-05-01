@@ -16,13 +16,13 @@ public class RotaConsumer extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("spring-rabbitmq:direct_01?routingKey=" + CARAMELO + "&queues=dog_queue&arg.queue.durable=true")
+        from("spring-rabbitmq:direct_01?routingKey=" + CARAMELO + "&queues=dog_queue_caramelo&arg.queue.durable=true")
                 .routeId("CONSUMER_CARAMELO_ROUTE_ID")
                 .autoStartup(true)
                 .unmarshal().json(JsonLibrary.Jackson, Dog.class)
                 .log(LoggingLevel.INFO, "---- Recebido: ${body}");
 
-        from("spring-rabbitmq:direct_01?routingKey=" + AZUL + "&queues=dog_queue&arg.queue.durable=true")
+        from("spring-rabbitmq:direct_01?routingKey=" + AZUL + "&queues=dog_queue_azul&arg.queue.durable=true")
                 .routeId("CONSUMER_AZUL_ROUTE_ID")
                 .autoStartup(true)
                 .unmarshal().json(JsonLibrary.Jackson, Dog.class)
