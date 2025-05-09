@@ -18,11 +18,11 @@ public class BeanProducer {
 
     public void send() throws JsonProcessingException {
         String color = ColorMap.getColor();
-        Dog dog = new Dog("Xula", color);
+        Dog xula = new Dog("Xula", color);
         ObjectMapper objectMapper = new ObjectMapper();
 
-        producerTemplate.sendBody("spring-rabbitmq:direct_01?routingKey=" + color, objectMapper.writeValueAsString(dog));
+        producerTemplate.sendBody("spring-rabbitmq:direct_01?routingKey=" + color, objectMapper.writeValueAsString(xula));
 
-        System.out.println("===== Enviando mensagem: " + dog + " =====  ");
+        System.out.println("===== Enviando mensagem: " + xula + " =====  ");
     }
 }

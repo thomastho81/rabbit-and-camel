@@ -24,6 +24,11 @@ public class Config {
     }
 
     @Bean
+    public Queue dogQueue() {
+        return new Queue("dog_queue");
+    }
+
+    @Bean
     public Binding bindingDirectAzul(DirectExchange directExchange, Queue queue01) {
         return BindingBuilder.bind(queue01).to(directExchange).with("Azul");
     }
@@ -31,11 +36,6 @@ public class Config {
     @Bean
     public Binding bindingDirectCaramelo(DirectExchange directExchange, Queue dogQueue) {
         return BindingBuilder.bind(dogQueue).to(directExchange).with("Caramelo");
-    }
-
-    @Bean
-    public Queue dogQueue() {
-        return new Queue("dog_queue");
     }
 
 }
