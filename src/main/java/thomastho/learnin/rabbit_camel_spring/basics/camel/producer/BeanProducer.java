@@ -1,11 +1,11 @@
-package thomastho.learnin.rabbit_camel_spring.camel.producer;
+package thomastho.learnin.rabbit_camel_spring.basics.camel.producer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.camel.ProducerTemplate;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.ColorMap;
-import thomastho.learnin.rabbit_camel_spring.Dog;
+import thomastho.learnin.rabbit_camel_spring.basics.ColorMap;
+import thomastho.learnin.rabbit_camel_spring.basics.Dog;
 
 @Component
 public class BeanProducer {

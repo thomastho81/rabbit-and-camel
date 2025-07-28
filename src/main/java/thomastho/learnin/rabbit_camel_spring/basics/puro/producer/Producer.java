@@ -1,12 +1,12 @@
-package thomastho.learnin.rabbit_camel_spring.puro.producer;
+package thomastho.learnin.rabbit_camel_spring.basics.puro.producer;
 
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.ColorMap;
-import thomastho.learnin.rabbit_camel_spring.Dog;
+import thomastho.learnin.rabbit_camel_spring.basics.ColorMap;
+import thomastho.learnin.rabbit_camel_spring.basics.Dog;
 
 @Profile({"puro", "puro-producer"})
 @Component

@@ -1,11 +1,11 @@
-package thomastho.learnin.rabbit_camel_spring.camel.consumer;
+package thomastho.learnin.rabbit_camel_spring.basics.camel.consumer;
 
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.Dog;
+import thomastho.learnin.rabbit_camel_spring.basics.Dog;
 
 @Profile({"camel", "camel-consumer"})
 @Component

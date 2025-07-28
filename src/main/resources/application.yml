@@ -5,3 +5,6 @@ spring:
 camel:
   springboot:
     main-run-controller: true
+  #component:
+   # spring-rabbitmq:
+    #  concurrent-consumers: 2

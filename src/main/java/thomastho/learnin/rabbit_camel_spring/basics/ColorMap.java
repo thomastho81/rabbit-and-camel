@@ -1,4 +1,4 @@
-package thomastho.learnin.rabbit_camel_spring;
+package thomastho.learnin.rabbit_camel_spring.basics;
 
 import java.util.List;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package thomastho.learnin.rabbit_camel_spring.camel.consumer;
+package thomastho.learnin.rabbit_camel_spring.basics.camel.consumer;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.context.annotation.Profile;

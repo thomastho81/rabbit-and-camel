@@ -1,4 +1,4 @@
-package thomastho.learnin.rabbit_camel_spring.puro;
+package thomastho.learnin.rabbit_camel_spring.basics.puro;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

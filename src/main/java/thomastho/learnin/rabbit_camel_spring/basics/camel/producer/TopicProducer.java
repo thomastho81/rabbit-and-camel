@@ -1,10 +1,10 @@
-package thomastho.learnin.rabbit_camel_spring.camel.producer;
+package thomastho.learnin.rabbit_camel_spring.basics.camel.producer;
 
 import org.apache.camel.ProducerTemplate;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.ColorMap;
+import thomastho.learnin.rabbit_camel_spring.basics.ColorMap;
 
 @Profile({"camel-topic"})
 @Component

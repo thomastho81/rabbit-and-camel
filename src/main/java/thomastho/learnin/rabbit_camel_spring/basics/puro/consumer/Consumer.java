@@ -1,10 +1,10 @@
-package thomastho.learnin.rabbit_camel_spring.puro.consumer;
+package thomastho.learnin.rabbit_camel_spring.basics.puro.consumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
-import thomastho.learnin.rabbit_camel_spring.Dog;
+import thomastho.learnin.rabbit_camel_spring.basics.Dog;
 
 @Profile({"puro", "puro-consumer"})
 @Component
